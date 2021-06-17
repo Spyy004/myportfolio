@@ -71,7 +71,7 @@ class _FirstPageState extends State<FirstPage> {
 
               HoverButton(
                 child: Text(
-                  'Skills',
+                  'kills',
                   style: TextStyle(
                       fontWeight: FontWeight.bold, color: Colors.white),
                 ),
