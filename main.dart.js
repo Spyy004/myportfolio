@@ -53083,7 +53083,7 @@ V.mv.prototype={
 ax:function(){return new V.ET(D.QL(0,1),C.n)}}
 V.ET.prototype={
 J:function(a,b){var s=null,r=4294598975,q=4294598943,p=b.T(t.w).f,o=L.aF("AYUSH PAWAR",B.Of(C.i,s,C.o),s),n=t.t
-return M.SX(E.JZ(H.c([T.dO(H.c([K.bW(L.aF("Home",A.bJ(s,s,C.i,s,s,s,s,s,s,s,s,s,s,C.o,s,s,!0,s,s,s,s,s,s),s),new P.o(r),0,new P.o(q),8,s,C.i,new V.YC(b),C.N),K.bW(L.aF("Projects",A.bJ(s,s,C.i,s,s,s,s,s,s,s,s,s,s,C.o,s,s,!0,s,s,s,s,s,s),s),new P.o(r),0,new P.o(q),8,s,C.i,new V.YD(b),C.N),K.bW(L.aF("Skills",A.bJ(s,s,C.i,s,s,s,s,s,s,s,s,s,s,C.o,s,s,!0,s,s,s,s,s,s),s),new P.o(r),0,new P.o(q),8,s,C.i,new V.YE(b),C.N),K.bW(L.aF("Connect",A.bJ(s,s,C.i,s,s,s,s,s,s,s,s,s,s,C.o,s,s,!0,s,s,s,s,s,s),s),new P.o(r),0,new P.o(q),8,s,C.i,new V.YF(b),C.N)],n),C.z,C.kh,C.A)],n),new P.o(r),0,new T.bI(new V.az(15,15,0,0),o,s),10*p.a.a),new P.o(r),K.Sv(new V.YG(this)),!1)}}
+return M.SX(E.JZ(H.c([T.dO(H.c([K.bW(L.aF("Home",A.bJ(s,s,C.i,s,s,s,s,s,s,s,s,s,s,C.o,s,s,!0,s,s,s,s,s,s),s),new P.o(r),0,new P.o(q),8,s,C.i,new V.YC(b),C.N),K.bW(L.aF("Projects",A.bJ(s,s,C.i,s,s,s,s,s,s,s,s,s,s,C.o,s,s,!0,s,s,s,s,s,s),s),new P.o(r),0,new P.o(q),8,s,C.i,new V.YD(b),C.N),K.bW(L.aF("kills",A.bJ(s,s,C.i,s,s,s,s,s,s,s,s,s,s,C.o,s,s,!0,s,s,s,s,s,s),s),new P.o(r),0,new P.o(q),8,s,C.i,new V.YE(b),C.N),K.bW(L.aF("Connect",A.bJ(s,s,C.i,s,s,s,s,s,s,s,s,s,s,C.o,s,s,!0,s,s,s,s,s,s),s),new P.o(r),0,new P.o(q),8,s,C.i,new V.YF(b),C.N)],n),C.z,C.kh,C.A)],n),new P.o(r),0,new T.bI(new V.az(15,15,0,0),o,s),10*p.a.a),new P.o(r),K.Sv(new V.YG(this)),!1)}}
 V.YC.prototype={
 $0:function(){K.d5(this.a,"/home",t._)},
 $S:1}
