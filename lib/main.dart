@@ -18,7 +18,10 @@ void main() {
             return Scaffold(body: FirstPage());
           }
           if (sizing.isMobile) {
-            return FirstPageMobile();
+            return Scaffold
+              (
+              backgroundColor: Colors.white,
+                body: FirstPageMobile());
           }
           return Container(
             child: Center(
