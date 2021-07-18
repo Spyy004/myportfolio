@@ -75,30 +75,10 @@ class SecondPage extends StatelessWidget {
          ],
         elevation: 0,
       ),
-      body:ResponsiveBuilder(
-        builder: (context,sizing)
-        {
-          if(sizing.isDesktop)
-          {
-            return PageView(
+      body: PageView(
                 scrollDirection: Axis.vertical,
-                children: [SecondPageFirstChild(),SecondPageSecondChild()]);
-          }
-          if(sizing.isTablet)
-          {
-            return PageView(
-                scrollDirection: Axis.vertical,
-                children: [SecondPageFirstChild(),SecondPageSecondChild()]);
-          }
-          if(sizing.isMobile)
-          {
-            return PageView(
-                scrollDirection: Axis.vertical,
-                children: [SecondPageFirstChild(),SecondPageSecondChildMobile()]);
-          }
-          return CircularProgressIndicator();
-        },
-      )
+                children: [SecondPageFirstChild(),SecondPageSecondChild()])
+
     );
 
   }

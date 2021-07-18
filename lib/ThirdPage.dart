@@ -67,40 +67,16 @@ class ThirdPage extends StatelessWidget {
           ],
         elevation: 0,
       ),
-      body: ResponsiveBuilder(
-        builder: (context,sizing)
-        {
-          if(sizing.isDesktop)
-          {
-            return PageView(
+      body:
+             PageView(
                 scrollDirection: Axis.vertical,
                 children: [
                   ThirdPageFirstChild(),
                   ThirdPageSecondChild(),
                   ThirdPageThirdChild()
-                ]) ;
-          }
-          if(sizing.isTablet)
-          {
-            return PageView(
-                scrollDirection: Axis.vertical,
-                children: [
-                  ThirdPageFirstChild(),
-                  ThirdPageSecondChild(),
-                  ThirdPageThirdChild()
-                ]);
-          }
-          if(sizing.isMobile)
-          {
-            return Container(
-              child: Center(
-                child: Text("Mobile Responsiveness coming soon please open on Desktop/Tablet/Laptop!"),
-              ),
-            );
-          }
-          return CircularProgressIndicator();
-        },
-      )
+                ])
+
+
 
       /*PageView(
           scrollDirection: Axis.vertical,
@@ -361,11 +337,9 @@ class ThirdPageThirdChild extends StatelessWidget {
   }
 }
 
-String devInceptinfo ='Worked on improving the site of DevIncept and adding more content to their DSA section of the site by creating solutions for various algorithmic problems along with a detailed explaination of the code. Out of 121 fellows, i was among the top 20 fellows in my batch.';
+String devInceptinfo ='1)Worked on improving the site of DevIncept and adding more content to their DSA section\n\n2)Achieved it by creating solutions for various algorithmic problems along with a detailed explaination of the code.\n\n3)Out of 121 fellows, i was among the top 20 fellows in my batch.';
 String devInceptSkills='Skills Portrayed: C++, Algorithms & Data Structures, Git, Time Management, Team-Work';
-String ecellinfo= 'At E-Cell IIIT Guwahati, my job is to manage a team of 5 amazing people and we look after all the events which are organized by the Ecell.  I was incharge of managing a talk on Product Management which had an attendance of over 150 students. I have also been a major part of organizing successfull online events for the E-Cell';
+String ecellinfo= '1)At E-Cell IIIT Guwahati, my job is to manage a team of 5 amazing people and we look after all the events which are organized by the Ecell.\n\n2)I was incharge of managing a talk on Product Management which had an attendance of over 150 students.\n\n3)I have also been a major part of organizing successful online events for the E-Cell';
 String ecellSkills= 'Skills Portrayed: Leadership, Teamwork, Problem-Solving, Time-Managament, Crisis Handling, Communication Skills';
-
 String indianWireinfo = 'At Indian Wire, I wrote around 290 technical articles over a span of 2 months. There were a total of 98.5k views on all my blogs with an average of 450 views. Out of the 10 interns i was among the top 3 interns in those two months';
-
 String indianWireSkills= 'Skills Portrayed: Creative Writing, Critical Thinking, Wordpress, Time-Management';

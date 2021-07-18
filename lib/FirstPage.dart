@@ -71,7 +71,7 @@ class _FirstPageState extends State<FirstPage> {
 
               HoverButton(
                 child: Text(
-                  'kills',
+                  'Skills',
                   style: TextStyle(
                       fontWeight: FontWeight.bold, color: Colors.white),
                 ),
@@ -104,31 +104,11 @@ class _FirstPageState extends State<FirstPage> {
         elevation: 0,
       ),
       backgroundColor: Color(0xffFA613F),
-      body:ResponsiveBuilder(
-        builder: (context,sizing)
-        {
-          if(sizing.isDesktop)
-            {
-              return PageView(
+      body: PageView(
                   scrollDirection: Axis.vertical,
                   controller: pageController,
-                  children: [SectionOneFirstPage(), SectionTwoFirstPage()]);
-            }
-          if(sizing.isTablet)
-            {
-              return PageView(
-                  scrollDirection: Axis.vertical,
-                  controller: pageController,
-                  children: [SectionOneFirstPage(), SectionTwoFirstPage()]);
-            }
+                  children: [SectionOneFirstPage(), SectionTwoFirstPage()])
 
-            return  PageView(
-                  scrollDirection: Axis.vertical,
-                  controller: pageController,
-                  children: [SectionOneFirstPage(), SectionTwoFirstPageMobile()]);
-
-        },
-      )
     );
   }
 }
@@ -340,131 +320,6 @@ class TopChild extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           )),
-    );
-  }
-}
-
-class SectionTwoFirstPageMobile extends StatefulWidget {
-  const SectionTwoFirstPageMobile({Key key}) : super(key: key);
-
-  @override
-  _SectionTwoFirstPageMobileState createState() => _SectionTwoFirstPageMobileState();
-}
-
-class _SectionTwoFirstPageMobileState extends State<SectionTwoFirstPageMobile> {
-  @override
-  Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
-    return Padding(
-      padding:  EdgeInsets.all(30.0),
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-        elevation: 10,
-        shadowColor: Color(0xfffa611f),
-        color: Color(0xffFA613F),
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-               vertical: 0.06 * screenSize.height,horizontal: 0.03*screenSize.width),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              CircleAvatar(
-                backgroundImage: AssetImage("assets/MyImage.png",
-                ),
-                radius: 50,
-                backgroundColor: Colors.deepOrangeAccent,
-              ),
-                SizedBox(height: 0.02*screenSize.height,),
-              Text(
-                "AYUSH PAWAR",
-                style: GoogleFonts.lato(
-                    color: Colors.white,
-                    fontSize: 0.025*screenSize.width,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 1.2,
-                    shadows: [
-                      Shadow(
-                          color: Colors.black,
-                          blurRadius: 10,
-                          offset: Offset(0.0, 3.0))
-                    ],
-                    decorationColor: Color(0xffFFF55A)),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 0.02*screenSize.height,),
-              SizedBox(
-                width: 0.1*screenSize.width,
-                height: 0.09*screenSize.height,
-                child: AnimatedTextKit(animatedTexts: [
-                  RotateAnimatedText('Student',textStyle: y),
-                  RotateAnimatedText('Developer',textStyle: y),
-                  RotateAnimatedText('Athlete',textStyle: y),
-                ]),
-              ),
-              SizedBox(height: 0.01*screenSize.height,),
-              Text(myInfo,
-                style: GoogleFonts.lato(
-                  color: Colors.white,
-                  fontSize: 0.026*screenSize.width,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1.2,
-                  wordSpacing: 1.2,
-                ),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 0.05*screenSize.height,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  HoverButton(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'My Resume',
-                        style: TextStyle(
-                            color: Colors.white,fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    color: Color(0xffFA613F),
-                    elevation: 0,
-                    hoverColor: Color(0xffFA611F),
-                    hoverTextColor: Colors.white,
-                    onpressed: ()async {
-                      if(await canLaunch(resumeLink))
-                      {
-                        launch(resumeLink);
-                      }
-                      else
-                      {
-                        throw "Sorry cannot load url";
-                      }
-                    },
-                  ),
-                  HoverButton(
-                    child: Padding(
-                      padding: const EdgeInsets.only(right:10.0),
-                      child: Text(
-                        "Contact",
-                        style: TextStyle(
-                            color: Colors.white,fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    color: Color(0xffFA613F),
-                    elevation: 0,
-                    hoverColor: Color(0xffFA611F),
-                    hoverTextColor: Colors.white,
-                    onpressed: () {
-                      Navigator.pushNamed(context, RoutesName.FOURTH_PAGE);
-                    },
-                  ),
-                ],
-              )
-            ],
-          ),
-        ),
-      ),
     );
   }
 }

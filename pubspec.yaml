@@ -37,7 +37,10 @@ dependencies:
   carousel_slider: ^3.0.0
   responsive_framework: ^0.1.2
   responsive_builder: ^0.4.1
-
+  animate_do:
+  flutter_staggered_grid_view:
+  font_awesome_flutter:
+  expansion_card:
 dev_dependencies:
   flutter_test:
     sdk: flutter

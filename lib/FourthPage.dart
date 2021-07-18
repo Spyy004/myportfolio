@@ -73,40 +73,16 @@ class FourthPage extends StatelessWidget {
           ],
         elevation: 0,
       ),
-      body:ResponsiveBuilder(
-        builder: (context,sizing)
-        {
-          if(sizing.isDesktop)
-          {
-            return PageView(
+      body: PageView(
                 scrollDirection: Axis.vertical,
                 children:[
                   FourthPageFirstChild(),
                   FourthPageSecondChild(),
                 ]
-            ) ;
-          }
-          if(sizing.isTablet)
-          {
-            return PageView(
-                scrollDirection: Axis.vertical,
-                children:[
-                  FourthPageFirstChild(),
-                  FourthPageSecondChild(),
-                ]
-            );
-          }
-          if(sizing.isMobile)
-          {
-            return Container(
-              child: Center(
-                child: Text("Mobile Responsiveness coming soon please open on Desktop/Tablet/Laptop!"),
-              ),
-            );
-          }
-          return CircularProgressIndicator();
-        },
-      )
+            )
+
+
+
 
       /*PageView(
         scrollDirection: Axis.vertical,
