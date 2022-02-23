@@ -150,7 +150,7 @@ class _ThirdPageSecondChildState extends State<ThirdPageSecondChild> {
                   height: 0.25*screenSize.height,
                   child:Column(
                     children: [
-                     Text("Languages",style: GoogleFonts.shadowsIntoLight(fontSize: 0.03*screenSize.width,color: Color(0xff97FECA),shadows:[
+                     Text("Skills",style: GoogleFonts.shadowsIntoLight(fontSize: 0.03*screenSize.width,color: Color(0xff97FECA),shadows:[
                     Shadow(
                         color: Colors.black,
                         blurRadius: 10,
@@ -162,7 +162,7 @@ class _ThirdPageSecondChildState extends State<ThirdPageSecondChild> {
                     ),
                     Row(
                         children: [
-                          Expanded(child: SkillsText("C, C++, Python, Dart",screenSize)),
+                          Expanded(child: SkillsText("C, C++, Python, Dart, MySQL, Flutter, Firebase",screenSize)),
                         ],
                       )
                     ],
@@ -187,7 +187,7 @@ class _ThirdPageSecondChildState extends State<ThirdPageSecondChild> {
                   height: 0.25*screenSize.height,
                   child:Column(
                     children: [
-                      Text("Frameworks and Database",style: GoogleFonts.shadowsIntoLight(fontSize: 0.02*screenSize.width,color: Color(0xff97FECA),shadows:[
+                      Text("Achievements",style: GoogleFonts.shadowsIntoLight(fontSize: 0.02*screenSize.width,color: Color(0xff97FECA),shadows:[
                         Shadow(
                             color: Colors.black,
                             blurRadius: 10,
@@ -199,7 +199,7 @@ class _ThirdPageSecondChildState extends State<ThirdPageSecondChild> {
                       ),
                       Row(
                         children: [
-                          Expanded(child: SkillsText("Flutter, MySql, Firebase, REST API, Git, Unity",screenSize)),
+                          Expanded(child: SkillsText("Category Winner: JP Morgan Code for Good,  Category Winner:Microsoft Best for Social Good, HackTheBronx: Overall Runner Up",screenSize)),
                         ],
                       )
                     ],

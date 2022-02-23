@@ -204,7 +204,7 @@ class FourthPageSecondChild extends StatelessWidget {
       ),
                     child: AnimatedTextKit(
                       animatedTexts: [
-                        TypewriterAnimatedText('i.yush.004@gmail.com',
+                        TypewriterAnimatedText('cswithiyush.hashnode.dev',
                           speed: Duration(milliseconds: 100),
                           textStyle: GoogleFonts.lato(color:Color(0xffFBE00E),fontSize: 28,shadows: [ Shadow(
                               color: Colors.black,
