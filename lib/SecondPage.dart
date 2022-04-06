@@ -137,7 +137,7 @@ class _SecondPageSecondChildState extends State<SecondPageSecondChild> {
          mainAxisSpacing: 0.01*screenSize.height,
          shrinkWrap: true,
         children: [
-          ProjectCard(screenSize,'DSA(Open Source)',DSAinfo,'https://github.com/Learn-Write-Repeat/DSA'),
+          ProjectCard(screenSize,'DigiQ',DSAinfo,'https://github.com/Spyy004/hackthebronxdigiqMobile'),
           Container(),
           ProjectCard(screenSize, 'MeetMeWhere', meetMeWhereInfo, 'https://github.com/Spyy004/MeetmeWhere'),
           Container(),
@@ -147,7 +147,7 @@ class _SecondPageSecondChildState extends State<SecondPageSecondChild> {
           ProjectCard(screenSize, 'Daily Services', dailyServicesInfo, 'https://github.com/Spyy004/allihoop-technical-assessment'),
           ProjectCard(screenSize, 'Algo-Visualizer', algoVisualizerInfo, 'https://github.com/Spyy004/algo_visual'),
           Container(),
-          ProjectCard(screenSize, 'Quiz App', QuizAppInfo, 'https://github.com/Spyy004/quiz_app'),
+          ProjectCard(screenSize, 'BudgetAI', QuizAppInfo, 'https://github.com/Spyy004/budgetAI'),
         ],
       ),
     );
@@ -175,12 +175,12 @@ class _SecondPageSecondChildState extends State<SecondPageSecondChild> {
          autoPlayInterval: Duration(seconds: 4)
        ),
        items: [
-         ProjectCard2(screenSize,'DSA(Open Source)',DSAinfo,'https://github.com/Learn-Write-Repeat/DSA'),
+         ProjectCard2(screenSize,'DigiQ',DSAinfo,'https://github.com/Spyy004/hackthebronxdigiqMobile'),
          ProjectCard2(screenSize, 'MeetMeWhere', meetMeWhereInfo, 'https://github.com/Spyy004/MeetmeWhere'),
          ProjectCard2(screenSize, 'FPL-Predictor', fplAppinfo, 'https://github.com/Spyy004/fpl_predictor_'),
          ProjectCard2(screenSize, 'Daily Services', dailyServicesInfo, 'https://github.com/Spyy004/allihoop-technical-assessment'),
          ProjectCard2(screenSize, 'Algo-Visualizer', algoVisualizerInfo, 'https://github.com/Spyy004/algo_visual'),
-         ProjectCard2(screenSize, 'Quiz App', QuizAppInfo, 'https://github.com/Spyy004/quiz_app'),
+         ProjectCard2(screenSize, 'BudgetAI', QuizAppInfo, 'https://github.com/Spyy004/budgetAI'),
        ],
      );
    }
