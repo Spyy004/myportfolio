@@ -13,7 +13,7 @@ var fplPredictorInfo='A Flutter application which collects data from the FPL API
 var dailyServicesInfo='This app is your one stop for community services management. You can create new public services and manage the booking, scheduling, and deleting the services within a particular community. You can even create new communities as per your need';
 var algoVisualizerInfo='This is a very basic app made on Flutter. This app visualizes 3 basic sorting algorithms and 2 searching algorithms. This app was made just to practice my flutter basic skills. You can keep on adding more algorithms if you wish to contribute.';
 var QuizAppInfo='Budget.ai is a mobile application that helps you manage your finances in a better way.It has features like Expenses Diary, Expense Forecast, Visualizing your past Expenses, getting Budget.ai Credit Score, etc.Our Expense Diary feature helps you to record all your daily expenses into major categories which can be visualized over time and can help in forecasting your future expenses.';
-var resumeLink ='https://drive.google.com/file/d/1_nhC5A9zzUqpHJh7ghFN3dPN-L7DDQ-8/view?usp=sharing';
+var resumeLink ='https://drive.google.com/file/d/1XjCRoVS7S_jzPIicO1YU94BQRUNcDaOf/view?usp=sharing';
 TextStyle y = GoogleFonts.lato(
     color: Colors.black,
     fontSize: 10,
@@ -37,8 +37,8 @@ List<String>projectInfo=[ "This is an open source contribution which was done du
 'This is a very basic app made on Flutter. This app visualizes 3 basic sorting algorithms and 2 searching algorithms. This app was made just to practice my flutter basic skills. You can keep on adding more algorithms if you wish to contribute.',
 'My first flutter app.Learned basic layout of flutter widgets and how they work with each other. Learned to add dart packages and use it in a project. It has an timer for every question and gives you your total score at the end. The most basic app made in Flutter by me'
 ];
-List<String>expTitle= ["Applore Tech","DevIncept","E-Cell IIITG"];
+List<String>expTitle= ["Applore Tech","Legato","Edfora"];
 List<String>connectTitle = ["githubMobile.png","linkedinMobile.png","twitterMobile.jpg","instagramMobile.jpg"];
-List<String>expInfo= [apploreInfo,devInceptinfo,ecellinfo];
+List<String>expInfo= [apploreInfo,legatoinfo,edforainfo];
 List<String>expSkills = [apploreSkills,devInceptSkills,ecellSkills];
 List<String>projectUrl = ['https://github.com/Learn-Write-Repeat/DSA','https://github.com/Spyy004/MeetmeWhere','https://github.com/Spyy004/fpl_predictor_','https://github.com/Spyy004/allihoop-technical-assessment','https://github.com/Spyy004/algo_visual','https://github.com/Spyy004/quiz_app'];

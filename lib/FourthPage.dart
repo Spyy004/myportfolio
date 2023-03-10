@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -108,14 +109,16 @@ class FourthPageFirstChild extends StatelessWidget {
           SizedBox(
             height: 0.3*screenSize.height,
           ),
-          Container(
-            child: Text("Let's Connect",style: GoogleFonts.shadowsIntoLight(fontSize: 0.06*screenSize.width,color: Color(0xffFBE00E),shadows:[
-              Shadow(
-                  color: Colors.black,
-                  blurRadius: 10,
-                  offset: Offset(0.0,3.0)
-              )
-            ]),
+          BounceInDown(
+            child: Container(
+              child: Text("Let's Connect",style: GoogleFonts.shadowsIntoLight(fontSize: 0.06*screenSize.width,color: Color(0xffFBE00E),shadows:[
+                Shadow(
+                    color: Colors.black,
+                    blurRadius: 10,
+                    offset: Offset(0.0,3.0)
+                )
+              ]),
+              ),
             ),
           ),
           SizedBox(

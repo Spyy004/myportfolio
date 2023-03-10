@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -99,14 +100,16 @@ class ThirdPageFirstChild extends StatelessWidget {
           SizedBox(
             height: 0.3*screenSize.height,
           ),
-          Container(
-            child: Text("Skills & Experience",style: GoogleFonts.shadowsIntoLight(fontSize: 0.06*screenSize.width,color: Color(0xff97FECA),shadows:[
-              Shadow(
-                  color: Colors.black,
-                  blurRadius: 10,
-                  offset: Offset(0.0,3.0)
-              )
-            ]),
+          BounceInDown(
+            child: Container(
+              child: Text("Skills & Experience",style: GoogleFonts.shadowsIntoLight(fontSize: 0.06*screenSize.width,color: Color(0xff97FECA),shadows:[
+                Shadow(
+                    color: Colors.black,
+                    blurRadius: 10,
+                    offset: Offset(0.0,3.0)
+                )
+              ]),
+              ),
             ),
           ),
           SizedBox(
@@ -141,31 +144,33 @@ class _ThirdPageSecondChildState extends State<ThirdPageSecondChild> {
               ..rotateY( _offset.dx),
             alignment: FractionalOffset.center,
             child: Center(
-              child: Card(
-                elevation: 20,
-                color: Color(0xff0E33B2),
-                shadowColor: Color(0xff0E31B2),
-                child: Container(
-                  width: 0.2*screenSize.width,
-                  height: 0.25*screenSize.height,
-                  child:Column(
-                    children: [
-                     Text("Skills",style: GoogleFonts.shadowsIntoLight(fontSize: 0.03*screenSize.width,color: Color(0xff97FECA),shadows:[
-                    Shadow(
-                        color: Colors.black,
-                        blurRadius: 10,
-                        offset: Offset(0.0,3.0)
-                    )
-                  ]),),
-                    SizedBox(
-                      height: 0.03*screenSize.height,
-                    ),
-                    Row(
-                        children: [
-                          Expanded(child: SkillsText("C, C++, Python, Dart, MySQL, Flutter, Firebase",screenSize)),
-                        ],
+              child: SlideInLeft(
+                child: Card(
+                  elevation: 20,
+                  color: Color(0xff0E33B2),
+                  shadowColor: Color(0xff0E31B2),
+                  child: Container(
+                    width: 0.2*screenSize.width,
+                    height: 0.25*screenSize.height,
+                    child:Column(
+                      children: [
+                       Text("Skills",style: GoogleFonts.shadowsIntoLight(fontSize: 0.03*screenSize.width,color: Color(0xff97FECA),shadows:[
+                      Shadow(
+                          color: Colors.black,
+                          blurRadius: 10,
+                          offset: Offset(0.0,3.0)
                       )
-                    ],
+                    ]),),
+                      SizedBox(
+                        height: 0.03*screenSize.height,
+                      ),
+                      Row(
+                          children: [
+                            Expanded(child: SkillsText("C++, Python, Dart, MySQL, Flutter, Firebase, React-Native, Typescript, Javascript",screenSize)),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -177,32 +182,34 @@ class _ThirdPageSecondChildState extends State<ThirdPageSecondChild> {
               ..rotateX( _offset.dy)
               ..rotateY( _offset.dx),
             alignment: FractionalOffset.center,
-            child: Center(
-              child: Card(
-                elevation: 20,
-                color: Color(0xff0E33B2),
-                shadowColor: Color(0xff0E31B2),
-                child: Container(
-                  width: 0.2*screenSize.width,
-                  height: 0.25*screenSize.height,
-                  child:Column(
-                    children: [
-                      Text("Achievements",style: GoogleFonts.shadowsIntoLight(fontSize: 0.02*screenSize.width,color: Color(0xff97FECA),shadows:[
-                        Shadow(
-                            color: Colors.black,
-                            blurRadius: 10,
-                            offset: Offset(0.0,3.0)
+            child: Center(  
+              child: SlideInRight(
+                child: Card(
+                  elevation: 20,
+                  color: Color(0xff0E33B2),
+                  shadowColor: Color(0xff0E31B2),
+                  child: Container(
+                    width: 0.2*screenSize.width,
+                    height: 0.25*screenSize.height,
+                    child:Column(
+                      children: [
+                        Text("Achievements",style: GoogleFonts.shadowsIntoLight(fontSize: 0.02*screenSize.width,color: Color(0xff97FECA),shadows:[
+                          Shadow(
+                              color: Colors.black,
+                              blurRadius: 10,
+                              offset: Offset(0.0,3.0)
+                          )
+                        ]),),
+                        SizedBox(
+                          height: 0.03*screenSize.height,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(child: SkillsText("Category Winner: JP Morgan Code for Good,  Category Winner:Microsoft Best for Social Good, HackTheBronx: Overall Runner Up",screenSize)),
+                          ],
                         )
-                      ]),),
-                      SizedBox(
-                        height: 0.03*screenSize.height,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(child: SkillsText("Category Winner: JP Morgan Code for Good,  Category Winner:Microsoft Best for Social Good, HackTheBronx: Overall Runner Up",screenSize)),
-                        ],
-                      )
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -242,9 +249,9 @@ class ThirdPageThirdChild extends StatelessWidget {
         //   padding: EdgeInsets.only(top: 0.15*screenSize.height,left: 0.02*screenSize.width) ,
         mainAxisSpacing: 0.01*screenSize.height,
         children: [
-          ExperienceCard(screenSize,Colors.black,'assets/devinceptLogo.png', 'Open Source Contributor/Fellow',devInceptinfo,devInceptSkills),
-          ExperienceCard(screenSize,Colors.white,'assets/ecellLogo.png','Event Management Team Head',ecellinfo,ecellSkills),
-          ExperienceCard(screenSize,Colors.blueAccent,'assets/theindianwireLogo.png','Technical Content Writer',indianWireinfo,indianWireSkills),
+          SlideInLeft(child: ExperienceCard(screenSize,Colors.blueAccent,'assets/legato.png', 'SDE Intern',legatoinfo,devInceptSkills)),
+          SlideInDown(child: ExperienceCard(screenSize,Colors.blueAccent,'assets/applore.jpg','SDE Intern',apploreinfo,ecellSkills)),
+          SlideInRight(child: ExperienceCard(screenSize,Colors.blueAccent,'assets/edfora.jpg','SDE Intern',edforainfo,indianWireSkills)),
         ],
       ),
     );
@@ -337,9 +344,9 @@ class ThirdPageThirdChild extends StatelessWidget {
   }
 }
 
-String devInceptinfo ='1)Worked on improving the site of DevIncept and adding more content to their DSA section\n\n2)Achieved it by creating solutions for various algorithmic problems along with a detailed explaination of the code.\n\n3)Out of 121 fellows, i was among the top 20 fellows in my batch.';
-String devInceptSkills='Skills Portrayed: C++, Algorithms & Data Structures, Git, Time Management, Team-Work';
-String ecellinfo= '1)At E-Cell IIIT Guwahati, my job is to manage a team of 5 amazing people and we look after all the events which are organized by the Ecell.\n\n2)I was incharge of managing a talk on Product Management which had an attendance of over 150 students.\n\n3)I have also been a major part of organizing successful online events for the E-Cell';
-String ecellSkills= 'Skills Portrayed: Leadership, Teamwork, Problem-Solving, Time-Managament, Crisis Handling, Communication Skills';
-String indianWireinfo = 'At Indian Wire, I wrote around 290 technical articles over a span of 2 months. There were a total of 98.5k views on all my blogs with an average of 450 views. Out of the 10 interns i was among the top 3 interns in those two months';
-String indianWireSkills= 'Skills Portrayed: Creative Writing, Critical Thinking, Wordpress, Time-Management';
+String legatoinfo ='1)Design and build a Rule Engine to verify the payload for various health APIs in real-time.\n\n2)Helped the organization to shift to an in-house Rule Engine reducing expenses by 10 percent.';
+String devInceptSkills='Skills Portrayed: C++, Algorithms & Data Structures, Git, Python, Sanic API';
+String apploreinfo= '1) Worked on building a full-fledged food delivery app for a Dubai based restaurant chain.\n\n2) Implement key functionalities like payment integration, User verification & authentication, Auth services, Real time chat, and cart management.\n\n3) Coded a sleek and clean web dashboard UI with authentication services, and bluetooth & ardurino integration with Flutter';
+String ecellSkills= 'Skills Portrayed: Flutter, Dart, Firebase, Data Structures, Algorithms';
+String edforainfo = '1) Work on improving the Glorifire mobile app performance.\n\n2)Brainstorm new ideas and implement them';
+String indianWireSkills= 'Skills Portrayed: React-Native, Data Structures, Algorithms, Javascript, Typescript';

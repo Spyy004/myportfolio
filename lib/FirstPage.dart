@@ -1,4 +1,5 @@
 import 'dart:html';
+import 'package:animate_do/animate_do.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_cube/flutter_cube.dart';
@@ -124,7 +125,8 @@ class SectionOneFirstPage extends StatelessWidget {
     Object robot = Object(fileName: 'assets/model.obj');
     return Column(
       children: [
-        FirstChildSectionOne(),
+        FirstChildSectionOne()
+  
       ],
     );
   }
@@ -143,18 +145,20 @@ class FirstChildSectionOne extends StatelessWidget {
           SizedBox(
             height: 0.3 * screenSize.height,
           ),
-          Container(
-            child: Text(
-              "ABOUT ME",
-              style: GoogleFonts.shadowsIntoLight(
-                  fontSize: 0.06 * screenSize.width,
-                  color: Color(0xffFFF55A),
-                  shadows: [
-                    Shadow(
-                        color: Colors.black,
-                        blurRadius: 10,
-                        offset: Offset(0.0, 3.0))
-                  ]),
+          BounceInDown(
+            child: Container(
+              child: Text(
+                "ABOUT ME",
+                style: GoogleFonts.shadowsIntoLight(
+                    fontSize: 0.06 * screenSize.width,
+                    color: Color(0xffFFF55A),
+                    shadows: [
+                      Shadow(
+                          color: Colors.black,
+                          blurRadius: 10,
+                          offset: Offset(0.0, 3.0))
+                    ]),
+              ),
             ),
           ),
 
@@ -194,105 +198,105 @@ class MiddleChild extends StatelessWidget {
       bottom: 0.15 * screenSize.height,
       left: 0.15 * screenSize.width,
       right: 0.2 * screenSize.width,
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-        elevation: 10,
-        shadowColor: Color(0xfffa611f),
-        color: Color(0xffFA613F),
-        child: Padding(
-          padding: EdgeInsets.only(
-              left: 0.35 * screenSize.width, top: 0.10 * screenSize.height),
-          child: Column(
-            children: [
-              Text(
-                "AYUSH PAWAR",
-                style: GoogleFonts.lato(
+      child: SlideInLeft(
+        child: Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+          elevation: 10,
+          shadowColor: Color(0xfffa611f),
+          color: Color(0xffFA613F),
+          child: Padding(
+            padding: EdgeInsets.only(
+                left: 0.35 * screenSize.width, top: 0.10 * screenSize.height),
+            child: Column(
+              children: [
+                Text(
+                  "AYUSH PAWAR",
+                  style: GoogleFonts.lato(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.2,
+                      shadows: [
+                        Shadow(
+                            color: Colors.black,
+                            blurRadius: 10,
+                            offset: Offset(0.0, 3.0))
+                      ],
+                     ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 0.02*screenSize.height,),
+                SizedBox(
+                  width: 0.1*screenSize.width,
+                  height: 0.09*screenSize.height,
+                  child: AnimatedTextKit(animatedTexts: [
+                    RotateAnimatedText('Student',textStyle: y),
+                    RotateAnimatedText('Developer',textStyle: y),
+                    RotateAnimatedText('Athlete',textStyle: y),
+                  ]),
+                ),
+                SizedBox(height: 0.02*screenSize.height,),
+                Text(myInfo,
+                  style: GoogleFonts.lato(
                     color: Colors.white,
-                    fontSize: 30,
+                    fontSize: 0.00986*screenSize.width,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1.2,
-                    shadows: [
-                      Shadow(
-                          color: Colors.black,
-                          blurRadius: 10,
-                          offset: Offset(0.0, 3.0))
-                    ],
-                    decoration: TextDecoration.underline,
-                    decorationStyle: TextDecorationStyle.solid,
-                    decorationColor: Color(0xffFFF55A)),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 0.02*screenSize.height,),
-              SizedBox(
-                width: 0.1*screenSize.width,
-                height: 0.09*screenSize.height,
-                child: AnimatedTextKit(animatedTexts: [
-                  RotateAnimatedText('Student',textStyle: y),
-                  RotateAnimatedText('Developer',textStyle: y),
-                  RotateAnimatedText('Athlete',textStyle: y),
-                ]),
-              ),
-              SizedBox(height: 0.02*screenSize.height,),
-              Text(myInfo,
-                style: GoogleFonts.lato(
-                  color: Colors.white,
-                  fontSize: 0.00986*screenSize.width,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1.2,
-                  wordSpacing: 1.2,
+                    wordSpacing: 1.2,
+                  ),
+                  textAlign: TextAlign.left,
                 ),
-                textAlign: TextAlign.left,
-              ),
-              SizedBox(height: 0.05*screenSize.height,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  HoverButton(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'My Resume',
-                        style: TextStyle(
-                             color: Colors.white,fontWeight: FontWeight.bold),
+                SizedBox(height: 0.05*screenSize.height,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    HoverButton(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'My Resume',
+                          style: TextStyle(
+                               color: Colors.white,fontWeight: FontWeight.bold),
+                        ),
                       ),
+                      color: Color(0xffFA613F),
+                      elevation: 0,
+                      hoverColor: Color(0xffFA611F),
+                      hoverTextColor: Colors.white,
+                      onpressed: ()async {
+                       if(await canLaunch(resumeLink))
+                         {
+                           launch(resumeLink);
+                         }
+                       else
+                         {
+                           throw "Sorry cannot load url";
+                         }
+                      },
                     ),
-                    color: Color(0xffFA613F),
-                    elevation: 0,
-                    hoverColor: Color(0xffFA611F),
-                    hoverTextColor: Colors.white,
-                    onpressed: ()async {
-                     if(await canLaunch(resumeLink))
-                       {
-                         launch(resumeLink);
-                       }
-                     else
-                       {
-                         throw "Sorry cannot load url";
-                       }
-                    },
-                  ),
-                  HoverButton(
-                    child: Padding(
-                      padding: const EdgeInsets.only(right:10.0),
-                      child: Text(
-                        "Contact",
-                        style: TextStyle(
-                             color: Colors.white,fontWeight: FontWeight.bold),
+                    HoverButton(
+                      child: Padding(
+                        padding: const EdgeInsets.only(right:10.0),
+                        child: Text(
+                          "Contact",
+                          style: TextStyle(
+                               color: Colors.white,fontWeight: FontWeight.bold),
+                        ),
                       ),
+                      color: Color(0xffFA613F),
+                      elevation: 0,
+                      hoverColor: Color(0xffFA611F),
+                      hoverTextColor: Colors.white,
+                      onpressed: () {
+                        Navigator.pushNamed(context, RoutesName.FOURTH_PAGE);
+                      },
                     ),
-                    color: Color(0xffFA613F),
-                    elevation: 0,
-                    hoverColor: Color(0xffFA611F),
-                    hoverTextColor: Colors.white,
-                    onpressed: () {
-                      Navigator.pushNamed(context, RoutesName.FOURTH_PAGE);
-                    },
-                  ),
-                ],
-              )
-            ],
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),
@@ -309,17 +313,19 @@ class TopChild extends StatelessWidget {
       bottom: 0.05 * screenSize.height,
       left: 0.18 * screenSize.width,
       right: 0.55 * screenSize.width,
-      child: Card(
-          semanticContainer: true,
-          clipBehavior: Clip.antiAliasWithSaveLayer,
-          elevation: 20,
-          child: Image.asset(
-            'assets/MyImage2.jpg',
-            fit: BoxFit.cover,
-          ),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.0),
-          )),
+      child: SlideInRight(
+        child: Card(  
+            semanticContainer: true,
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            elevation: 20,
+            child: Image.asset(
+              'assets/MyImage2.jpg',
+              fit: BoxFit.cover,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            )),
+      ),
     );
   }
 }

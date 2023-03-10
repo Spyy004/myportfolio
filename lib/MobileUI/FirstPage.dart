@@ -327,7 +327,7 @@ class MobileViewPage3 extends StatelessWidget {
                                     child: Wrap(
                                       children: [
                                         SkillsCardMobile(
-                                          title: "C",
+                                          title: "Javascript",
                                           del: 0,
                                         ),
                                         SizedBox(
@@ -383,7 +383,7 @@ class MobileViewPage3 extends StatelessWidget {
                                           height: 0.03*height,
                                         ),
                                         SkillsCardMobile(
-                                          title: "Unity",
+                                          title: "React-Native",
                                           del: 7,
                                         ),
                                       ],
@@ -433,7 +433,7 @@ class MobileViewPage3 extends StatelessWidget {
                                       child:  CircleAvatar(
                                         radius: 30,
                                         backgroundImage: AssetImage(
-                                          index==0?"applore.jpg":index==1?"devinceptLogo.png":"ecellLogo.png"
+                                          index==0?"applore.jpg":index==1?"legato.png":"edfora.jpg"
                                         ),
                                         backgroundColor:index==0?Color(0xff9157F8):index==1?Colors.white:Colors.white ,
                                       ),

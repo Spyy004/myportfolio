@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -77,7 +78,9 @@ class SecondPage extends StatelessWidget {
       ),
       body: PageView(
                 scrollDirection: Axis.vertical,
-                children: [SecondPageFirstChild(),SecondPageSecondChild()])
+                children: [
+                  SecondPageFirstChild(),
+                  SecondPageSecondChild()])
 
     );
 
@@ -95,14 +98,16 @@ class SecondPageFirstChild extends StatelessWidget {
             SizedBox(
               height: 0.3*screenSize.height,
             ),
-            Container(
-              child: Text("PROJECTS",style: GoogleFonts.shadowsIntoLight(fontSize: 0.06*screenSize.width,color: Colors.white,shadows:[
-                Shadow(
-                    color: Colors.black,
-                    blurRadius: 10,
-                    offset: Offset(0.0,3.0)
-                )
-              ]),
+            BounceInDown(
+              child: Container(
+                child: Text("PROJECTS",style: GoogleFonts.shadowsIntoLight(fontSize: 0.06*screenSize.width,color: Colors.white,shadows:[
+                  Shadow(
+                      color: Colors.black,
+                      blurRadius: 10,
+                      offset: Offset(0.0,3.0)
+                  )
+                ]),
+                ),
               ),
             ),
             SizedBox(
@@ -128,27 +133,30 @@ class _SecondPageSecondChildState extends State<SecondPageSecondChild> {
     Offset _offset = Offset(0.2, 0.6);
     return Padding(
       padding:  EdgeInsets.symmetric(vertical:0.05* screenSize.height,horizontal:0.05*screenSize.width ),
-      child: GridView.count(
-          crossAxisCount: 4,
-         crossAxisSpacing: 0.01*screenSize.width,
-         addAutomaticKeepAlives: true,
-         addRepaintBoundaries: true,
-      //   padding: EdgeInsets.only(top: 0.15*screenSize.height,left: 0.02*screenSize.width) ,
-         mainAxisSpacing: 0.01*screenSize.height,
-         shrinkWrap: true,
-        children: [
-          ProjectCard(screenSize,'DigiQ',DSAinfo,'https://github.com/Spyy004/hackthebronxdigiqMobile'),
-          Container(),
-          ProjectCard(screenSize, 'MeetMeWhere', meetMeWhereInfo, 'https://github.com/Spyy004/MeetmeWhere'),
-          Container(),
-          Container(),
-          ProjectCard(screenSize, 'FPL-Predictor', fplAppinfo, 'https://github.com/Spyy004/fpl_predictor_'),
-          Container(),
-          ProjectCard(screenSize, 'Daily Services', dailyServicesInfo, 'https://github.com/Spyy004/allihoop-technical-assessment'),
-          ProjectCard(screenSize, 'Algo-Visualizer', algoVisualizerInfo, 'https://github.com/Spyy004/algo_visual'),
-          Container(),
-          ProjectCard(screenSize, 'BudgetAI', QuizAppInfo, 'https://github.com/Spyy004/budgetAI'),
-        ],
+      child: SlideInLeft(
+        duration: Duration(seconds: 2),
+        child: GridView.count(
+            crossAxisCount: 4,
+           crossAxisSpacing: 0.01*screenSize.width,
+           addAutomaticKeepAlives: true,
+           addRepaintBoundaries: true,
+        //   padding: EdgeInsets.only(top: 0.15*screenSize.height,left: 0.02*screenSize.width) ,
+           mainAxisSpacing: 0.01*screenSize.height,
+           shrinkWrap: true,
+          children: [
+            ProjectCard(screenSize,'DigiQ',DSAinfo,'https://github.com/Spyy004/hackthebronxdigiqMobile'),
+            Container(),
+            ProjectCard(screenSize, 'MeetMeWhere', meetMeWhereInfo, 'https://github.com/Spyy004/MeetmeWhere'),
+            Container(),
+            Container(),
+            ProjectCard(screenSize, 'FPL-Predictor', fplAppinfo, 'https://github.com/Spyy004/fpl_predictor_'),
+            Container(),
+            ProjectCard(screenSize, 'Daily Services', dailyServicesInfo, 'https://github.com/Spyy004/allihoop-technical-assessment'),
+            ProjectCard(screenSize, 'Algo-Visualizer', algoVisualizerInfo, 'https://github.com/Spyy004/algo_visual'),
+            Container(),
+            ProjectCard(screenSize, 'BudgetAI', QuizAppInfo, 'https://github.com/Spyy004/budgetAI'),
+          ],
+        ),
       ),
     );
   }
